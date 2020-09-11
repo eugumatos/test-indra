@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.msgErr {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: $color-error;
+
+  &__icon {
+    color: $color-error;
+    margin-right: 5px;
+  }
+}

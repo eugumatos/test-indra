@@ -1,0 +1,84 @@
+<header class="header">
+  <div class="header__menu">
+    <a routerLink="/home"><img  class="header__image" src="assets/images/itau-logo.png" alt="Itau" /></a>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__link">institucional</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link">produtos</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link">banco indra para você</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link">cartões</a>
+        </li>
+      </ul>
+      <ul class="header__list header__list--medium">
+        <li class="header__item">
+          <a class="header__link">serviços</a>
+          <!-- <app-dropdown [showDropdown]=""><app-dropdown/> -->
+        </li>
+        <li class="header__item">
+          <a class="header__link">ajuda</a>
+        </li>
+      </ul>
+      <!--
+        <ul class="header__list header__list--small">
+        <li class="header__item">
+          <i class="material-icons header__item-icon">account_box</i>
+        </li>
+      </ul>
+      -->
+    </nav>
+    <div class="header__search">
+      <i class="material-icons header__icon">search</i>
+      <input class="header__input header__field" type="text" name="search" placeholder="busca">
+    </div>
+    <div class="header__access">
+      <div class="header__account">
+        <h4 class="header__text">Acesse sua conta</h4>
+        <div class="header__line">
+          <div class="header__form">
+            <input class="header__form-field" type="tel" name="agency" placeholder="agência"/>
+            <span class="header__form-partition"></span>
+            <input class="header__form-field" type="tel" name="account" placeholder="conta"/>
+          </div>
+          <button class="header__button">
+            <i class="material-icons header__button-icon">lock</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__menu--hamburger menu-hamburger">
+    <img  class="menu-hamburger__image" src="assets/images/itau-logo.png" alt="Itau" />
+    <input type="checkbox" class="menu-hamburger__check" id="check"/>
+      <label class="menu-hamburger__label" for="check">
+          <i class="material-icons menu-hamburger--open">menu</i>
+          <i class="material-icons menu-hamburger--close">clear</i>
+      </label>
+      <div class="menu-hamburger__content">
+          <ul class="menu-hamburger__list">
+            <li class="menu-hamburger__item">
+              <i class="material-icons menu-hamburger__icon">search</i>
+              <input class="menu-hamburger__input" type="text" name="search" placeholder="busca" />
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="menu-hamburger__link">institucional</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="menu-hamburger__link">produtos</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="menu-hamburger__link">banco indra para você</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="menu-hamburger__link">cartões</a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</header>

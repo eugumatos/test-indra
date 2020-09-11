@@ -1,0 +1,54 @@
+<div class="create-account">
+  <div class="create-account__content">
+    <header class="create-account__header">
+      <i class="material-icons create-account__icon">account_circle</i>
+      <h1 class="create-account__title">Criar conta itaú</h1>
+    </header>
+    <form [formGroup]="newAccountForm" class="create-account__form" (ngSubmit)="onSubmit()">
+      <div class="create-account__form-item">
+        <label class="create-account__label" >Nome:</label>
+        <input class="create-account__field" type="name" formControlName="name" [ngClass]="applyCss('name')">
+        <app-field-err [showErr]="verifyValidTouched('name')" msgErr="Nome obrigatório"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <label class="create-account__label">CPF:</label>
+        <input class="create-account__field" type="tel" formControlName="cpf" [ngClass]="applyCss('cpf')"/>
+        <app-field-err [showErr]="verifyValidTouched('cpf')" msgErr="CPF inválido ou vazio"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <label class="create-account__label">Celular:</label>
+        <input class="create-account__field" type="tel" formControlName="phone" [ngClass]="applyCss('phone')"/>
+        <app-field-err [showErr]="verifyValidTouched('phone')" msgErr="Número obrigatório"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <label class="create-account__label">Data de nascimento:</label>
+        <input class="create-account__field" type="date" formControlName="birth" [ngClass]="applyCss('birth')">
+        <app-field-err [showErr]="verifyValidTouched('birth')" msgErr="Data obrigatória"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <label class="create-account__label">Email:</label>
+        <input class="create-account__field" type="text" formControlName="email" [ngClass]="applyCss('email')"/>
+        <app-field-err [showErr]="verifyValidTouched('email')" msgErr="Email inválido ou vazio"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <label class="create-account__label">Senha:</label>
+        <input class="create-account__field" type="password" formControlName="password" [ngClass]="applyCss('password')"/>
+        <app-field-err [showErr]="verifyValidTouched('password')" msgErr="Digite uma senha de 6 a 8 dígitos"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <label class="create-account__label">Confirmação senha:</label>
+        <input class="create-account__field" type="password" formControlName="passwordMatched" [ngClass]="applyCss('passwordMatched')"/>
+        <app-field-err [showErr]="verifyValidTouched('passwordMatched')" msgErr="Senhas não coincidem"></app-field-err>
+      </div>
+      <div class="create-account__form-item">
+        <input class="create-account__checkbox" type="checkbox" formControlName="checkbox" id="check" />
+        <label class="create-account__label" htmlFor="check">Aceito termos</label>
+      </div>
+      <div class="create-account__form-item">
+        <input class="create-account__checkbox" type="checkbox" formControlName="checkbox2" id="check2" />
+        <label class="create-account__label" for="check2">Desejo receber mais informações sobre investimentos via SMS</label>
+      </div>
+      <button [disabled]="!newAccountForm.valid" class="create-account__button">criar conta</button>
+    </form>
+  </div>
+</div>
