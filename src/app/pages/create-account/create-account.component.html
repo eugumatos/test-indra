@@ -7,17 +7,17 @@
     <form [formGroup]="newAccountForm" class="create-account__form" (ngSubmit)="onSubmit()">
       <div class="create-account__form-item">
         <label class="create-account__label" >Nome:</label>
-        <input class="create-account__field" type="name" formControlName="name" [ngClass]="applyCss('name')">
+        <input class="create-account__field" type="name" placeholder="nome" formControlName="name" [ngClass]="applyCss('name')">
         <app-field-err [showErr]="verifyValidTouched('name')" msgErr="Nome obrigatório"></app-field-err>
       </div>
       <div class="create-account__form-item">
         <label class="create-account__label">CPF:</label>
-        <input class="create-account__field" type="tel" formControlName="cpf" [ngClass]="applyCss('cpf')"/>
+        <input class="create-account__field" type="tel" formControlName="cpf" placeholder="Ex.: 000.000.000-00" [ngClass]="applyCss('cpf')"/>
         <app-field-err [showErr]="verifyValidTouched('cpf')" msgErr="CPF inválido ou vazio"></app-field-err>
       </div>
       <div class="create-account__form-item">
         <label class="create-account__label">Celular:</label>
-        <input class="create-account__field" type="tel" formControlName="phone" [ngClass]="applyCss('phone')"/>
+        <input class="create-account__field" type="tel" formControlName="phone" placeholder="Ex.: (00) 0000-0000" [ngClass]="applyCss('phone')"/>
         <app-field-err [showErr]="verifyValidTouched('phone')" msgErr="Número obrigatório"></app-field-err>
       </div>
       <div class="create-account__form-item">
@@ -27,17 +27,17 @@
       </div>
       <div class="create-account__form-item">
         <label class="create-account__label">Email:</label>
-        <input class="create-account__field" type="text" formControlName="email" [ngClass]="applyCss('email')"/>
+        <input class="create-account__field" type="text" formControlName="email" placeholder="nome@gmail.com" [ngClass]="applyCss('email')"/>
         <app-field-err [showErr]="verifyValidTouched('email')" msgErr="Email inválido ou vazio"></app-field-err>
       </div>
       <div class="create-account__form-item">
         <label class="create-account__label">Senha:</label>
-        <input class="create-account__field" type="password" formControlName="password" [ngClass]="applyCss('password')"/>
+        <input class="create-account__field" type="password" formControlName="password" placeholder="senha" [ngClass]="applyCss('password')"/>
         <app-field-err [showErr]="verifyValidTouched('password')" msgErr="Digite uma senha de 6 a 8 dígitos"></app-field-err>
       </div>
       <div class="create-account__form-item">
         <label class="create-account__label">Confirmação senha:</label>
-        <input class="create-account__field" type="password" formControlName="passwordMatched" [ngClass]="applyCss('passwordMatched')"/>
+        <input class="create-account__field" type="password" formControlName="passwordMatched" placeholder="senha" [ngClass]="applyCss('passwordMatched')"/>
         <app-field-err [showErr]="verifyValidTouched('passwordMatched')" msgErr="Senhas não coincidem"></app-field-err>
       </div>
       <div class="create-account__form-item">
